@@ -1,7 +1,7 @@
 import React from 'react';
 
 function EmailItem(props) {
-  console.log(props.from);
+  // console.log(props.from);
   return (
     <>
       <tr className="cursor-pointer">

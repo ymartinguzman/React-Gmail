@@ -12,7 +12,7 @@ class EmailReader extends React.Component {
     this.forceUpdate();
   }
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <div>
         <div className="col2 mt-1 pt-1">

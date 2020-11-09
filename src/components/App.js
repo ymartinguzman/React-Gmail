@@ -5,8 +5,6 @@ import EmailItem from './EmailItem';
 import EmailReader from './EmailReader';
 import emails from '../data/emails.json';
 
-let info = emails[0].subject;
-
 const renderEmails = () => {
   return emails.map((email) => {
     return (
@@ -20,10 +18,23 @@ const renderEmails = () => {
   });
 };
 
-function App(props) {
+function App() {
+  const handleInboxFilter = () => {
+    console.log('App:me han clicado en Recibidos');
+  };
+  const handleDeleteFilter = () => {
+    console.log('App:me han clicado en Papelera');
+  };
+  const handleTextFilter = (data) => {
+    console.log('App:me han clicado en el Input', data);
+  };
   return (
     <div>
-      <Header />
+      <Header
+        handleInboxFilter={handleInboxFilter}
+        handleDeleteFilter={handleDeleteFilter}
+        handleTextFilter={handleTextFilter}
+      />
 
       <table className="table">
         <tbody>{renderEmails()}</tbody>
